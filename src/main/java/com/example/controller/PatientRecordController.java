@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins="https://app-dummy123.herokuapp.com")
 public class PatientRecordController {
+
     @Autowired
     PatientRecordRepository patientRecordRepository;
 
@@ -30,6 +32,7 @@ public class PatientRecordController {
         patientRecordRepository.save(patient);
         return patientRecordRepository.findAll();
     }
+
 
 
     @PutMapping("/patients/{id}")
