@@ -24,6 +24,7 @@ public class PatientRecordController {
         return patientRecordRepository.findById(id).get();
     }
 
+
     @PostMapping("/patient")
     public List<PatientRecord> addPatient(@RequestBody PatientRecord patient) {
         patientRecordRepository.save(patient);
