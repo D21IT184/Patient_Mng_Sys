@@ -40,6 +40,7 @@ public class PatientRecordController {
         return patientRecordRepository.findAll();
     }
 
+
     @DeleteMapping("/patient/{id}")
     public List<PatientRecord> deleteStudent(@PathVariable Integer id) {
         patientRecordRepository.delete(patientRecordRepository.findById(id).get());
