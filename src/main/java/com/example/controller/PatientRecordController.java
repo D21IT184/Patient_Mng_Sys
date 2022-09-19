@@ -30,6 +30,7 @@ public class PatientRecordController {
         return patientRecordRepository.findAll();
     }
 
+
     @PutMapping("/patients/{id}")
     public List<PatientRecord> updatePatient(@RequestBody PatientRecord patientRecord, @PathVariable Integer id) {
         PatientRecord patientRecordObj = patientRecordRepository.findById(id).get();
@@ -43,5 +44,6 @@ public class PatientRecordController {
     public List<PatientRecord> deleteStudent(@PathVariable Integer id) {
         patientRecordRepository.delete(patientRecordRepository.findById(id).get());
         return patientRecordRepository.findAll();
+
     }
 }
