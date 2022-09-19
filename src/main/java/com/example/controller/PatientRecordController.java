@@ -18,6 +18,7 @@ public class PatientRecordController {
     @GetMapping("/listPatients")
     public List<PatientRecord> getAllPatients() {
 
+
         return patientRecordRepository.findAll();
     }
 
